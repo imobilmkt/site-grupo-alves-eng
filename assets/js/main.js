@@ -70,7 +70,7 @@
       var formData = new FormData(leadForm);
       fetch(FORM_ENDPOINT_URL, { method: "POST", mode: "no-cors", body: formData })
         .then(function () {
-          window.location.href = "./obrigado-obra-comercial.html";
+          window.location.href = "./obrigado-obra-comercial";
         })
         .catch(function () {
           if (statusEl) {
