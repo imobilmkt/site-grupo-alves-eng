@@ -67,10 +67,11 @@
         statusEl.removeAttribute("data-state");
       }
 
+      var thankYouUrl = leadForm.dataset.thankYouUrl || "./obrigado-obra-comercial";
       var formData = new FormData(leadForm);
       fetch(FORM_ENDPOINT_URL, { method: "POST", mode: "no-cors", body: formData })
         .then(function () {
-          window.location.href = "./obrigado-obra-comercial";
+          window.location.href = thankYouUrl;
         })
         .catch(function () {
           if (statusEl) {
