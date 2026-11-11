@@ -552,7 +552,7 @@ p { max-width: 62ch; }
   .split--reverse > * { direction: ltr; }
 }
 
-@media (max-width: 859px) {
+@media (max-width: 1059px) {
   .main-nav {
     position: fixed;
     top: 76px;
