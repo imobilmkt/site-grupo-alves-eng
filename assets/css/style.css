@@ -453,6 +453,33 @@ p { max-width: 62ch; }
 .faq-item p { color: var(--steel); font-size: 0.97rem; margin-top: 0.85rem; max-width: 56ch; }
 .section--navy .faq-item p { color: rgba(236, 233, 226, 0.78); }
 
+/* ---------- lead form ---------- */
+.lead-form-card {
+  background: var(--navy-mid);
+  border-top: 2px solid var(--gold);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+.lead-form-card h3 { color: #fff; font-size: 1.2rem; margin-bottom: 0.5rem; }
+.lead-form-card > p { color: rgba(236, 233, 226, 0.78); font-size: 0.95rem; margin-bottom: 1.5rem; }
+.lead-form { display: flex; flex-direction: column; gap: 1.1rem; }
+.form-row { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-row label { font-size: 0.85rem; font-weight: 600; color: rgba(236, 233, 226, 0.85); }
+.form-row input, .form-row select, .form-row textarea {
+  font: inherit;
+  font-size: 0.95rem;
+  color: #fff;
+  background: rgba(236, 233, 226, 0.06);
+  border: 1px solid var(--line-on-navy);
+  padding: 0.7rem 0.85rem;
+  resize: vertical;
+}
+.form-row input::placeholder, .form-row textarea::placeholder { color: rgba(236, 233, 226, 0.4); }
+.form-row select { appearance: auto; }
+.lead-form .btn { justify-content: center; margin-top: 0.4rem; }
+.lead-form .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.form-status { font-size: 0.88rem; color: var(--gold); min-height: 1.2em; }
+.form-status[data-state="error"] { color: #e8a0a0; }
+
 /* ---------- landing footer link ---------- */
 .footer-inner .footer-home-link { color: rgba(236, 233, 226, 0.6); }
 .footer-inner .footer-home-link:hover { color: #fff; }

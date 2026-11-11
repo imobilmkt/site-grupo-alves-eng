@@ -43,4 +43,42 @@
       button.classList.toggle("is-unmuted", !video.muted);
     });
   });
+
+  var leadForm = document.getElementById("orcamentoForm");
+  if (leadForm) {
+    var FORM_ENDPOINT_URL = "https://script.google.com/macros/s/AKfycbyeDhENTvcXCe8-NseRhYcxkdqIkYBqhhwTH0mVwUv1QTN45mZb_UVmgmKvoHh3ktk/exec";
+    var statusEl = leadForm.querySelector("[data-form-status]");
+    var submitBtn = leadForm.querySelector("button[type=submit]");
+
+    leadForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (FORM_ENDPOINT_URL.indexOf("COLE_AQUI") !== -1) {
+        if (statusEl) {
+          statusEl.textContent = "Formulário ainda não configurado. Fale pelo WhatsApp enquanto isso.";
+          statusEl.setAttribute("data-state", "error");
+        }
+        return;
+      }
+
+      if (submitBtn) submitBtn.disabled = true;
+      if (statusEl) {
+        statusEl.textContent = "Enviando...";
+        statusEl.removeAttribute("data-state");
+      }
+
+      var formData = new FormData(leadForm);
+      fetch(FORM_ENDPOINT_URL, { method: "POST", mode: "no-cors", body: formData })
+        .then(function () {
+          window.location.href = "./obrigado-obra-comercial.html";
+        })
+        .catch(function () {
+          if (statusEl) {
+            statusEl.textContent = "Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.";
+            statusEl.setAttribute("data-state", "error");
+          }
+          if (submitBtn) submitBtn.disabled = false;
+        });
+    });
+  }
 })();

@@ -36,7 +36,32 @@
 ]}
 </script>
 
-<!-- Google tag (gtag.js) para Google Ads / GA4: inserir o ID de medição aqui antes de veicular campanhas. -->
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-N6Z4K2XM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+
+<!-- Event snippet for CLIQUE WPP conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18569434693/5DvsCMakrbYdEMWszJZF',
+      'value': 1.0,
+      'currency': 'BRL',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -56,7 +81,7 @@
     </nav>
     <div class="header-actions">
       <a class="phone-link" href="tel:+5581998080553">(81) 99808-0553</a>
-      <a class="btn btn-gold" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">Solicitar orçamento</a>
+      <a class="btn btn-gold" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.');">Solicitar orçamento</a>
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu">
         <span></span>
       </button>
@@ -72,7 +97,7 @@
         <h1>Empreiteira em Recife para obras comerciais de grande porte.</h1>
         <p class="hero-lead">O Grupo Alves é a empreiteira que concessionárias e redes de varejo escolhem para construir e reformar suas unidades em Recife e Região Metropolitana — com engenharia própria, cronograma rígido e um único ponto de contato do primeiro traço no projeto à entrega das chaves.</p>
         <div class="hero-ctas">
-          <a class="btn btn-gold" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">Solicitar orçamento</a>
+          <a class="btn btn-gold" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.');">Solicitar orçamento</a>
           <a class="link-quiet" href="#obras">Ver obras realizadas</a>
         </div>
       </div>
@@ -163,7 +188,7 @@
         </figure>
       </div>
 
-      <a class="btn btn-outline-navy" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">Solicitar orçamento para obra comercial</a>
+      <a class="btn btn-outline-navy" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.');">Solicitar orçamento para obra comercial</a>
     </div>
   </section>
 
@@ -223,15 +248,49 @@
   </section>
 
   <section class="section section--navy" id="contato">
-    <div class="wrap">
-      <span class="kicker">Contato</span>
-      <h2>Vamos falar sobre a sua obra?</h2>
-      <p>Conte o que você precisa e retornamos com um orçamento. Atendemos obras comerciais em toda a Região Metropolitana do Recife.</p>
-      <div class="hero-ctas" style="margin-top:2rem;">
-        <a class="btn btn-gold" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">Falar no WhatsApp</a>
-        <a class="link-quiet" href="tel:+5581998080553">(81) 99808-0553</a>
+    <div class="wrap split">
+      <div>
+        <span class="kicker">Contato</span>
+        <h2>Vamos falar sobre a sua obra?</h2>
+        <p>Conte o que você precisa e retornamos com um orçamento. Atendemos obras comerciais em toda a Região Metropolitana do Recife.</p>
+        <div class="hero-ctas" style="margin-top:2rem;">
+          <a class="btn btn-gold" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.');">Falar no WhatsApp</a>
+          <a class="link-quiet" href="tel:+5581998080553">(81) 99808-0553</a>
+        </div>
       </div>
 
+      <div class="lead-form-card">
+        <h3>Prefere que a gente te retorne?</h3>
+        <p>Deixe seus dados que entramos em contato com um orçamento.</p>
+        <form id="orcamentoForm" class="lead-form">
+          <div class="form-row">
+            <label for="lf-nome">Nome</label>
+            <input type="text" id="lf-nome" name="nome" autocomplete="name" required>
+          </div>
+          <div class="form-row">
+            <label for="lf-whatsapp">WhatsApp</label>
+            <input type="tel" id="lf-whatsapp" name="whatsapp" autocomplete="tel" placeholder="(81) 9XXXX-XXXX" required>
+          </div>
+          <div class="form-row">
+            <label for="lf-tipo">Tipo de obra</label>
+            <select id="lf-tipo" name="tipoObra">
+              <option value="Concessionária">Concessionária</option>
+              <option value="Loja de rede">Loja de rede</option>
+              <option value="Supermercado">Supermercado</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="lf-mensagem">Conte um pouco sobre o projeto (opcional)</label>
+            <textarea id="lf-mensagem" name="mensagem" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold">Enviar e pedir orçamento</button>
+          <p class="form-status" data-form-status aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="wrap">
       <div class="contact-grid">
         <div class="contact-col">
           <h3>Fale conosco</h3>
@@ -259,7 +318,7 @@
   </div>
 </footer>
 
-<a class="whatsapp-tab" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." aria-label="Falar no WhatsApp">
+<a class="whatsapp-tab" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Tenho%20uma%20obra%20comercial%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.');" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.868-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/>
   </svg>
