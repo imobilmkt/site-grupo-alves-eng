@@ -29,7 +29,7 @@
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"Vocês reformam apenas em Boa Viagem?","acceptedAnswer":{"@type":"Answer","text":"Boa Viagem é nossa região de atuação principal, mas também atendemos bairros próximos em Recife — fale com a gente para confirmar o seu endereço."}},
+  {"@type":"Question","name":"Vocês reformam apenas em Boa Viagem?","acceptedAnswer":{"@type":"Answer","text":"Sim, para reforma residencial atendemos exclusivamente o bairro de Boa Viagem, em Recife."}},
   {"@type":"Question","name":"Dá para reformar um apartamento ocupado, com a família morando?","acceptedAnswer":{"@type":"Answer","text":"Sim, organizamos a obra em etapas e com cuidados específicos para reformas em imóveis ocupados e em condomínios."}},
   {"@type":"Question","name":"Vocês fazem só um serviço específico, como pintura ou piso epóxi, sem reforma completa?","acceptedAnswer":{"@type":"Answer","text":"Sim, atendemos também serviços avulsos: fachada ACM, piso epóxi, forro de drywall e pintura, sem necessidade de uma reforma completa."}},
   {"@type":"Question","name":"Como é feito o orçamento para reforma residencial?","acceptedAnswer":{"@type":"Answer","text":"Fazemos uma visita técnica ao imóvel, entendemos o escopo desejado e entregamos um orçamento detalhado com prazo antes de iniciar a obra."}}
@@ -73,9 +73,9 @@ function gtag_report_conversion(url) {
       <span class="brand-name">Grupo Alves<span>Engenharia</span></span>
     </a>
     <nav class="main-nav" id="mainNav" data-open="false">
-      <a href="#residencial">Reforma residencial</a>
-      <a href="#servicos">Serviços avulsos</a>
-      <a href="#faq">Perguntas frequentes</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#residencial">Residencial</a>
+      <a href="#faq">Dúvidas</a>
       <a href="#contato">Contato</a>
     </nav>
     <div class="header-actions">
@@ -90,24 +90,122 @@ function gtag_report_conversion(url) {
 
 <main id="conteudo">
 
-  <section class="hero hero--no-media" id="topo">
+  <section class="hero" id="topo">
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1>Reforma residencial em Boa Viagem, do projeto à entrega.</h1>
-        <p class="hero-lead">Reformamos apartamentos e coberturas em Boa Viagem com gestão de obra próxima, fornecedores selecionados e acabamento de alto padrão — com o cuidado que um imóvel ocupado exige. Também executamos fachada ACM, piso epóxi, forro de drywall e pintura, sem necessidade de reforma completa.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-gold" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Quero%20reformar%20meu%20im%C3%B3vel%20em%20Boa%20Viagem%20e%20gostaria%20de%20um%20or%C3%A7amento." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Quero%20reformar%20meu%20im%C3%B3vel%20em%20Boa%20Viagem%20e%20gostaria%20de%20um%20or%C3%A7amento.');">Solicitar orçamento</a>
-          <a class="link-quiet" href="#servicos">Ver serviços avulsos</a>
-        </div>
+        <h1>Reforma residencial e comercial em Boa Viagem, do projeto à entrega.</h1>
+        <p class="hero-lead">Reformamos apartamentos, coberturas e espaços comerciais em Boa Viagem com gestão de obra próxima, fornecedores selecionados e acabamento de alto padrão — com o cuidado que um imóvel ocupado exige. Também executamos fachada ACM, piso epóxi, forro de drywall e pintura, sem necessidade de reforma completa.</p>
+        <ul class="plain-list" style="margin-top:0;">
+          <li>Atendimento exclusivo em Boa Viagem, Recife</li>
+          <li>Gestão de obra próxima, com relatórios periódicos</li>
+          <li>Fornecedores selecionados e acabamento de alto padrão</li>
+        </ul>
+        <a class="link-quiet" href="#servicos">Ver serviços avulsos</a>
+      </div>
+
+      <div class="lead-form-card">
+        <h3>Peça seu orçamento</h3>
+        <p>Preencha e entraremos em contato com você.</p>
+        <form id="orcamentoForm" class="lead-form">
+          <div class="form-row">
+            <label for="lf-nome">Nome</label>
+            <input type="text" id="lf-nome" name="nome" autocomplete="name" required>
+          </div>
+          <div class="form-row">
+            <label for="lf-whatsapp">WhatsApp</label>
+            <input type="tel" id="lf-whatsapp" name="whatsapp" autocomplete="tel" placeholder="(81) 9XXXX-XXXX" required>
+          </div>
+          <div class="form-row">
+            <label for="lf-tipo">O que você precisa?</label>
+            <select id="lf-tipo" name="tipoObra">
+              <option value="Reforma residencial">Reforma residencial</option>
+              <option value="Reforma comercial">Reforma comercial</option>
+              <option value="Fachada ACM">Fachada ACM</option>
+              <option value="Piso Epóxi">Piso Epóxi</option>
+              <option value="Forro de Drywall">Forro de Drywall</option>
+              <option value="Pintura">Pintura</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-gold">Enviar e pedir orçamento</button>
+          <p class="form-status" data-form-status aria-live="polite"></p>
+        </form>
+        <p class="form-alt">ou <a class="link-quiet" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Quero%20reformar%20meu%20im%C3%B3vel%20em%20Boa%20Viagem%20e%20gostaria%20de%20um%20or%C3%A7amento." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Quero%20reformar%20meu%20im%C3%B3vel%20em%20Boa%20Viagem%20e%20gostaria%20de%20um%20or%C3%A7amento.');">fale agora no WhatsApp</a></p>
       </div>
     </div>
     <div class="trust-strip wrap">
-      <span>Atendemos</span>
+      <span>Atendimento</span>
       <ul>
-        <li>Boa Viagem</li>
-        <li>Pina</li>
-        <li>Recife/PE</li>
+        <li>Exclusivo em Boa Viagem, Recife/PE</li>
       </ul>
+    </div>
+  </section>
+
+  <section class="section section--paper" id="servicos">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Serviços avulsos</span>
+        <h2>Precisa de um serviço específico, sem reforma completa?</h2>
+        <p>Executamos também serviços avulsos para quem já tem o projeto definido ou precisa resolver um ponto específico da obra.</p>
+      </div>
+
+      <div class="services-list">
+        <article class="service-row" id="fachada-acm">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="6" y="6" width="36" height="36" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="15" y1="6" x2="15" y2="42" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="24" y1="6" x2="24" y2="42" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="33" y1="6" x2="33" y2="42" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <div>
+            <h3>Fachada ACM</h3>
+            <p>Revestimento em chapas de ACM para fachadas comerciais e residenciais, com acabamento uniforme e resistência a sol e chuva.</p>
+            <a class="link-quiet" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20fachada%20em%20ACM." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20fachada%20em%20ACM.');">Solicitar orçamento</a>
+          </div>
+        </article>
+
+        <article class="service-row" id="piso-epoxi">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6 32 L24 16 L42 32" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 32 L24 21 L36 32" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="4" y1="36" x2="44" y2="36" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <div>
+            <h3>Piso Epóxi</h3>
+            <p>Piso de resina epóxi para lojas, garagens e áreas comerciais, com alta resistência a tráfego e produtos químicos. Inclui também aplicação de revestimentos em cerâmica, porcelanato e vinílico.</p>
+            <a class="link-quiet" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20piso%20ep%C3%B3xi." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20piso%20ep%C3%B3xi.');">Solicitar orçamento</a>
+          </div>
+        </article>
+
+        <article class="service-row" id="forro-drywall">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="6" y="10" width="36" height="28" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="14" y="16" width="20" height="16" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="18" cy="13" r="1.6" fill="currentColor"/>
+            <circle cx="30" cy="13" r="1.6" fill="currentColor"/>
+          </svg>
+          <div>
+            <h3>Forro de Drywall</h3>
+            <p>Instalação de forro em drywall com acabamento liso, isolamento acústico e rebaixo para embutir iluminação.</p>
+            <a class="link-quiet" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20forro%20de%20drywall." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20forro%20de%20drywall.');">Solicitar orçamento</a>
+          </div>
+        </article>
+
+        <article class="service-row" id="pintura">
+          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="8" y="8" width="14" height="10" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="12" y="18" width="6" height="8" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="15" y1="26" x2="15" y2="40" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M15 40 L15 42" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M28 14 C 34 14, 40 18, 40 26 C 40 32, 36 36, 30 36" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <div>
+            <h3>Pintura</h3>
+            <p>Pintura interna e externa, residencial e comercial, com preparo de superfície e acabamento duradouro.</p>
+            <a class="link-quiet" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20de%20pintura." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20de%20pintura.');">Solicitar orçamento</a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -152,74 +250,6 @@ function gtag_report_conversion(url) {
     </div>
   </section>
 
-  <section class="section section--paper" id="servicos">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="kicker">Serviços avulsos</span>
-        <h2>Precisa de um serviço específico, sem reforma completa?</h2>
-        <p>Executamos também serviços avulsos para quem já tem o projeto definido ou precisa resolver um ponto específico da obra.</p>
-      </div>
-
-      <div class="services-list">
-        <article class="service-row" id="fachada-acm">
-          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="6" y="6" width="36" height="36" stroke="currentColor" stroke-width="1.5"/>
-            <line x1="15" y1="6" x2="15" y2="42" stroke="currentColor" stroke-width="1.5"/>
-            <line x1="24" y1="6" x2="24" y2="42" stroke="currentColor" stroke-width="1.5"/>
-            <line x1="33" y1="6" x2="33" y2="42" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-          <div>
-            <h3>Fachada ACM</h3>
-            <p>Revestimento em chapas de ACM para fachadas comerciais e residenciais, com acabamento uniforme e resistência a sol e chuva.</p>
-            <a class="link-quiet" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20fachada%20em%20ACM." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20fachada%20em%20ACM.');">Solicitar orçamento</a>
-          </div>
-        </article>
-
-        <article class="service-row" id="piso-epoxi">
-          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M6 32 L24 16 L42 32" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M12 32 L24 21 L36 32" stroke="currentColor" stroke-width="1.5"/>
-            <line x1="4" y1="36" x2="44" y2="36" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-          <div>
-            <h3>Piso Epóxi</h3>
-            <p>Piso de resina epóxi para lojas, garagens e áreas comerciais, com alta resistência a tráfego e produtos químicos.</p>
-            <a class="link-quiet" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20piso%20ep%C3%B3xi." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20piso%20ep%C3%B3xi.');">Solicitar orçamento</a>
-          </div>
-        </article>
-
-        <article class="service-row" id="forro-drywall">
-          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="6" y="10" width="36" height="28" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="14" y="16" width="20" height="16" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="18" cy="13" r="1.6" fill="currentColor"/>
-            <circle cx="30" cy="13" r="1.6" fill="currentColor"/>
-          </svg>
-          <div>
-            <h3>Forro de Drywall</h3>
-            <p>Instalação de forro em drywall com acabamento liso, isolamento acústico e rebaixo para embutir iluminação.</p>
-            <a class="link-quiet" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20forro%20de%20drywall." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20para%20forro%20de%20drywall.');">Solicitar orçamento</a>
-          </div>
-        </article>
-
-        <article class="service-row" id="pintura">
-          <svg class="service-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="8" y="8" width="14" height="10" stroke="currentColor" stroke-width="1.5"/>
-            <rect x="12" y="18" width="6" height="8" stroke="currentColor" stroke-width="1.5"/>
-            <line x1="15" y1="26" x2="15" y2="40" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M15 40 L15 42" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M28 14 C 34 14, 40 18, 40 26 C 40 32, 36 36, 30 36" stroke="currentColor" stroke-width="1.5"/>
-          </svg>
-          <div>
-            <h3>Pintura</h3>
-            <p>Pintura interna e externa, residencial e comercial, com preparo de superfície e acabamento duradouro.</p>
-            <a class="link-quiet" href="https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20de%20pintura." onclick="return gtag_report_conversion('https://wa.me/558193850266?text=Ol%C3%A1%2C%20Grupo%20Alves%21%20Gostaria%20de%20um%20or%C3%A7amento%20de%20pintura.');">Solicitar orçamento</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <section class="section section--stone" id="faq">
     <div class="wrap">
       <div class="section-head">
@@ -229,7 +259,7 @@ function gtag_report_conversion(url) {
       <div class="faq-list">
         <details class="faq-item">
           <summary>Vocês reformam apenas em Boa Viagem?</summary>
-          <p>Boa Viagem é nossa região de atuação principal, mas também atendemos bairros próximos em Recife — fale com a gente para confirmar o seu endereço.</p>
+          <p>Sim, para reforma residencial atendemos exclusivamente o bairro de Boa Viagem, em Recife.</p>
         </details>
         <details class="faq-item">
           <summary>Dá para reformar um apartamento ocupado, com a família morando?</summary>

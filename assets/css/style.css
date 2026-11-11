@@ -170,6 +170,7 @@ p { max-width: 62ch; }
   font-size: 0.92rem;
   font-weight: 500;
   color: rgba(236, 233, 226, 0.82);
+  white-space: nowrap;
 }
 .main-nav a:hover { color: #fff; }
 
@@ -249,8 +250,6 @@ p { max-width: 62ch; }
 }
 .hero-media img { width: 100%; height: clamp(220px, 42vw, 440px); object-fit: cover; }
 
-.hero--no-media .hero-grid { grid-template-columns: 1fr; }
-.hero--no-media .hero-copy { max-width: 42rem; }
 
 .trust-strip {
   position: relative;
@@ -479,6 +478,9 @@ p { max-width: 62ch; }
 .lead-form .btn:disabled { opacity: 0.6; cursor: not-allowed; }
 .form-status { font-size: 0.88rem; color: var(--gold); min-height: 1.2em; }
 .form-status[data-state="error"] { color: #e8a0a0; }
+.form-alt { text-align: center; font-size: 0.9rem; color: rgba(236, 233, 226, 0.7); margin-top: 1.25rem; }
+.hero .lead-form-card { max-width: 26rem; }
+@media (min-width: 860px) { .hero .lead-form-card { justify-self: end; width: 100%; } }
 
 /* ---------- landing footer link ---------- */
 .footer-inner .footer-home-link { color: rgba(236, 233, 226, 0.6); }
@@ -533,6 +535,11 @@ p { max-width: 62ch; }
   .portfolio-item:first-child img { height: 360px; }
   .contact-grid { grid-template-columns: repeat(3, 1fr); }
   .process-list { grid-template-columns: repeat(2, 1fr); }
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: clamp(2rem, 4vw, 3.5rem);
+  }
 }
 
 @media (min-width: 860px) {
